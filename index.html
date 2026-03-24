@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* Welcome Screen */
+        #welcome {
+            height: 100vh;
+            background: url('https://picsum.photos/1600/900') no-repeat center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        #main {
+            display: none;
+        }
+
+        nav {
+            background: black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav button {
+            margin: 5px;
+            background: white;
+        }
+
+        .tab {
+            display: none;
+            height: 100vh;
+            color: white;
+            padding: 40px;
+            background-size: cover;
+        }
+
+        #web {
+            background-image: url('https://picsum.photos/id/1015/1600/900');
+        }
+
+        #cs {
+            background-image: url('https://picsum.photos/id/1005/1600/900');
+        }
+
+        #tech {
+            background-image: url('https://picsum.photos/id/1025/1600/900');
+        }
+
+        #dev {
+            background-image: url('https://picsum.photos/id/1035/1600/900');
+        }
+
+        #contact {
+            background-image: url('https://picsum.photos/id/1045/1600/900');
+        }
+
+        img {
+            width: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Welcome Page -->
+<div id="welcome">
+    <h1>Welcome to My Website</h1>
+    <button onclick="enterSite()">Enter</button>
+</div>
+
+<!-- Main Website -->
+<div id="main">
+
+    <nav>
+        <button onclick="showTab('web')">Web Development</button>
+        <div class="surprise-box">
+    <button class="surprise-btn" onclick="showSurprise('s2')">🎁 Surprise</button>
+    <p id="s2" class="surprise-text">CS is all about solving problems! 💡</p>
+</div>
+        <button onclick="showTab('cs')">Computer Science</button>
+        <div class="surprise-box">
+    <button class="surprise-btn" onclick="showSurprise('s3')">🎁 Surprise</button>
+    <p id="s3" class="surprise-text">AI is shaping the future! 🤖</p>
+</div>
+        <button onclick="showTab('tech')">Innovations</button>
+        <button onclick="showTab('dev')">Developer</button>
+        <button onclick="showTab('contact')">Contact</button>
+    </nav>
+
+    <div id="web" class="tab">
+        <h1>Web Development</h1>
+        <p>Web development is the process of creating websites and web applications.</p>
+    </div>
+    <div class="surprise-box">
+    <button class="surprise-btn" onclick="showSurprise('s5')">🎁 Surprise</button>
+    <p id="s5" class="surprise-text">Thanks for visiting my website! 😊</p>
+</div>
+
+    <div id="cs" class="tab">
+        <h1>Computer Science</h1>
+        <p>Computer science studies computers, programming, and problem-solving.</p>
+    </div>
+
+    <div id="tech" class="tab">
+        <h1>Innovations of Technology</h1>
+        <p>Technology innovations include AI, robotics, and modern computing systems.</p>
+    </div>
+
+    <div id="dev" class="tab">
+        <h1>About Developer</h1>
+        <img src="imgpng.png" alt="Developer">
+        <p>Hello! I am a passionate web developer.</p>
+        <p>I love creating websites and learning new technologies.</p>
+        <p>I enjoy coding and solving problems.</p>
+        <p>This is my first website project.</p>
+    </div>
+
+    <div id="contact" class="tab">
+        <h1>Contact Us</h1>
+        <p>Email: ashishkusingh24@gmail.com</p>
+        <p>Phone: 94700721200</p>
+        <p>Location: PATNA </p>
+    </div>
+
+</div>
+
+<script>
+    function enterSite() {
+        document.getElementById("welcome").style.display = "none";
+        document.getElementById("main").style.display = "block";
+    }
+
+    function showTab(tabId) {
+        let tabs = document.getElementsByClassName("tab");
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = "none";
+        }
+        document.getElementById(tabId).style.display = "block";
+    }
+</script>
+
+</body>
+</html>
